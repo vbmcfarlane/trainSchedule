@@ -73,7 +73,7 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey) {
     tRemainding = diffTime % tFrequency;
     tMinutesTillTrain = tFrequency - tRemainding;  
     nextTrain = moment().add(tMinutesTillTrain, "minutes");
-    nTFormatted = moment(nextTrain).format("hh:mm");
+    nTFormatted = moment(nextTrain).format("hh:mm A");
 // displays  date and time in header
   $("#dateTime").text(moment().format("dddd, MMMM Do YYYY, h:mm:ss a"));
 // add train schedule info from database to the display table
